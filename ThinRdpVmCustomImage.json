@@ -31,8 +31,9 @@
 		"frontEndIPConfigID": "[concat(variables('lbID'),'/frontendIPConfigurations/loadBalancerFrontEnd')]",
 		"userImageStorageContainerName": "images",
 		"userImageVhdName":"jumpbox.vhd",
+		"deploymentId":"[uniqueString(deployment().name)]",
 		"userImageName": "[concat('http://',parameters('sandboxName'),'.blob.core.windows.net/',variables('userImageStorageContainerName'),'/',variables('userImageVhdName'))]",
-		"osDiskVhdName": "[concat('http://',parameters('sandboxName'),'.blob.core.windows.net/vhds/osDisk-','[deployment().id]','.vhd')]"
+		"osDiskVhdName": "[concat('http://',parameters('sandboxName'),'.blob.core.windows.net/vhds/osDisk-',variables('deploymentId'),'.vhd')]"
 	},
 	"resources": [
 	{
