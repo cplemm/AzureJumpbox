@@ -181,7 +181,7 @@
 					  "uri": "[variables('userImageName')]"
 					},
 					"vhd": {
-					  "uri": "[concat('http://',parameters('sandboxName'),'.blob.core.windows.net/vhds/osDisk-',reference(resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))).resourceGuid,'.vhd')]"
+					  "uri": "[concat('http://',parameters('sandboxName'),'.blob.core.windows.net/vhds/osDisk-',reference(resourceId('Microsoft.Network/loadBalancers', variables('loadBalancerName'))).resourceGuid,'.vhd')]"
 					},
 					"caching": "ReadWrite",
 					"createOption": "FromImage"
