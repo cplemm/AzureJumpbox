@@ -32,7 +32,7 @@
 		"userImageStorageContainerName": "images",
 		"userImageVhdName":"jumpbox.vhd",
 		"userImageName": "[concat('http://',parameters('sandboxName'),'.blob.core.windows.net/',variables('userImageStorageContainerName'),'/',variables('userImageVhdName'))]",
-		"osDiskVhdName": "[concat('http://',parameters('sandboxName'),'.blob.core.windows.net/vhds/osDisk-',deployment().id,'.vhd')]"
+		"osDiskVhdName": "[concat('http://',parameters('sandboxName'),'.blob.core.windows.net/vhds/osDisk-','[deployment().id]','.vhd')]"
 	},
 	"resources": [
 	{
