@@ -9,7 +9,8 @@
 			"type": "securestring"
 		},
 		"location": {
-			"type": "string"
+			"type": "string",
+			"defaultValue": "North Europe"
 		},
 		"sandboxName": {
 			"type": "string"
