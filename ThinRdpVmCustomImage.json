@@ -15,7 +15,6 @@
 		"sandboxName": {
 			"type": "string"
 		},
-		,
 		"dnsLabel": {
 			"type": "string"
 		}
